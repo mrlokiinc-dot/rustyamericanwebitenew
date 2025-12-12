@@ -3,677 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rusty American - Weekend Raiders | Best Weekend Rust Server</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Rusty American - Temporarily Down for Maintenance</title>
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .maintenance-container {
+            text-align: center;
+            max-width: 700px;
+            padding: 60px 40px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+            border: 2px solid #ff6b35;
+            box-shadow: 0 10px 50px rgba(255, 107, 53, 0.3);
+        }
+
+        .logo {
+            max-width: 200px;
+            margin-bottom: 30px;
+            filter: drop-shadow(0 0 20px rgba(255, 107, 53, 0.5));
+        }
+
+        .icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        h1 {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: #ff6b35;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            font-size: 24px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 30px;
+        }
+
+        .message {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #cccccc;
+            margin-bottom: 30px;
+        }
+
+        .date {
+            font-size: 22px;
+            font-weight: 700;
+            color: #ff6b35;
+            background: rgba(255, 107, 53, 0.1);
+            padding: 15px 30px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 16px;
+            color: #888888;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 36px;
+            }
+
+            .subtitle {
+                font-size: 20px;
+            }
+
+            .message {
+                font-size: 16px;
+            }
+
+            .maintenance-container {
+                padding: 40px 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <img src="images/rusty-american-logo.png" alt="Rusty American Logo" class="nav-logo">
-            </div>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#events">Weekend Events</a>
-                <a href="#features">Features</a>
-                <a href="#rules">Rules</a>
-                <a href="#leaderboard">Leaderboard</a>
-                <a href="#connect">Connect</a>
-                <a href="#store">Store</a>
-                <a href="#discord" class="discord-btn">Discord</a>
-            </div>
-            <div class="mobile-menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+    <div class="maintenance-container">
+        <img src="images/rusty-american-logo.png" alt="Rusty American Logo" class="logo">
+
+        <span class="icon">🔧</span>
+
+        <h1>Under Maintenance</h1>
+
+        <p class="subtitle">We're Temporarily Down</p>
+
+        <p class="message">
+            We're currently undergoing maintenance and relocating our server infrastructure.
+            <br><br>
+            Our team is working hard to bring you an even better experience.
+            We apologize for any inconvenience this may cause.
+        </p>
+
+        <div class="date">
+            Expected Return: Mid-January 2026
         </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <div class="server-status-badge">
-                <span class="status-dot"></span>
-                <span class="status-text">LIVE NOW</span>
-            </div>
-            <div class="weekend-badge">WEEKEND RAIDERS</div>
-            <h1 class="hero-title">RUSTY AMERICAN</h1>
-            <p class="hero-subtitle">Fridays Through Sundays. When Warriors Come Out to Play.</p>
-            <p class="hero-tagline">This is where weekends get BLOODY</p>
-
-            <!-- Wipe Countdown -->
-            <div class="wipe-countdown">
-                <div class="countdown-label">NEXT WIPE IN:</div>
-                <div class="countdown-timer">
-                    <div class="time-unit">
-                        <span class="time-number" id="days">0</span>
-                        <span class="time-label">Days</span>
-                    </div>
-                    <div class="time-unit">
-                        <span class="time-number" id="hours">0</span>
-                        <span class="time-label">Hours</span>
-                    </div>
-                    <div class="time-unit">
-                        <span class="time-number" id="minutes">0</span>
-                        <span class="time-label">Minutes</span>
-                    </div>
-                    <div class="time-unit">
-                        <span class="time-number" id="seconds">0</span>
-                        <span class="time-label">Seconds</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="hero-stats">
-                <div class="stat stat-highlight">
-                    <span class="stat-number" id="playerCount">0</span>
-                    <span class="stat-label">Players Online</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">200</span>
-                    <span class="stat-label">Max Slots</span>
-                </div>
-                <div class="stat stat-highlight">
-                    <span class="stat-number">Fri-Sun</span>
-                    <span class="stat-label">Peak Days</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">5X</span>
-                    <span class="stat-label">Weekend Rate</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">8-Man</span>
-                    <span class="stat-label">Max Team</span>
-                </div>
-            </div>
-
-            <!-- Peak Hours Indicator -->
-            <div class="peak-hours">
-                <div class="peak-icon">🔥</div>
-                <div class="peak-text">
-                    <span class="peak-title">PEAK HOURS: </span>
-                    <span class="peak-time">Friday 6PM - Sunday 11PM EST</span>
-                </div>
-            </div>
-
-            <div class="hero-buttons">
-                <button class="cta-button" onclick="copyIP()">
-                    <span id="serverIP">Click to Copy Server IP</span>
-                </button>
-                <a href="#connect" class="cta-button-secondary">How to Join</a>
-            </div>
-
-            <!-- Server Badges -->
-            <div class="server-badges">
-                <span class="badge badge-gold">WEEKEND KINGS</span>
-                <span class="badge">5X RATES FRI-SUN</span>
-                <span class="badge badge-red">NO MERCY ZONE</span>
-                <span class="badge">ACTIVE ADMINS</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">The Weekend Belongs to Raiders</h2>
-            <p class="section-description">
-                Monday through Thursday? Go touch grass. But when Friday hits at 6PM EST, this server transforms
-                into the most chaotic battlefield in Rust. <strong>5X gather rates</strong> on weekends means you'll
-                farm a base by Friday night and lose it all by Sunday.
-                <br><br>
-                This isn't a casual server. Weekend Warriors grind 48-hour marathons. Clans coordinate Friday raids.
-                Solos scramble to survive until Monday. We've got active admins watching for cheaters, weekly Thursday
-                wipes that reset the playing field, and a community of absolute savages who live for the weekend grind.
-                <br><br>
-                No hand-holding. No crying. Just pure, unfiltered weekend warfare.
-            </p>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <h2 class="section-title">Server Features</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>High Performance</h3>
-                    <p>Lag-free gameplay on premium dedicated servers with 99.9% uptime</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🛡️</div>
-                    <h3>Active Admins</h3>
-                    <p>24/7 admin support to ensure fair play and handle issues quickly</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3>Regular Events</h3>
-                    <p>Weekly events with exclusive rewards and prizes for participants</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🏆</div>
-                    <h3>Balanced Rates</h3>
-                    <p>Carefully tuned gather rates and loot tables for optimal gameplay</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔧</div>
-                    <h3>Quality Plugins</h3>
-                    <p>Hand-picked plugins to enhance your experience without breaking balance</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">👥</div>
-                    <h3>Great Community</h3>
-                    <p>Friendly and active Discord community with thousands of members</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section class="gallery">
-        <div class="container">
-            <h2 class="section-title">Weekend Warfare Gallery</h2>
-            <p class="section-description">This is what goes down every weekend. Blood, raids, and glory.</p>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="images/rust-action-1.jpg" alt="Rust Raid Action">
-                    <div class="gallery-overlay">
-                        <span class="gallery-label">Conquer the Elements</span>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/rust-action-2.jpg" alt="Rust Mountain Scene">
-                    <div class="gallery-overlay">
-                        <span class="gallery-label">Mountain Warfare</span>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/rust-action-3.jpg" alt="Rust Survival">
-                    <div class="gallery-overlay">
-                        <span class="gallery-label">Armed & Dangerous</span>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/rust-action-4.jpg" alt="Rust Base Defense">
-                    <div class="gallery-overlay">
-                        <span class="gallery-label">Survive & Thrive</span>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/rust-action-5.jpg" alt="Rust PvP">
-                    <div class="gallery-overlay">
-                        <span class="gallery-label">Battle Ready</span>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/rust-action-6.jpg" alt="Rust Apocalypse">
-                    <div class="gallery-overlay">
-                        <span class="gallery-label">Post-Apocalyptic Chaos</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Weekend Events Schedule -->
-    <section id="events" class="weekend-events">
-        <div class="container">
-            <h2 class="section-title">Weekend Event Schedule</h2>
-            <p class="section-description">Every weekend is packed with events. Show up or miss out.</p>
-            <div class="events-timeline">
-                <div class="event-day">
-                    <div class="day-header friday">
-                        <div class="day-icon">🔥</div>
-                        <h3>FRIDAY</h3>
-                        <span class="day-subtitle">The Grind Begins</span>
-                    </div>
-                    <div class="day-events">
-                        <div class="event-item">
-                            <span class="event-time">6:00 PM EST</span>
-                            <span class="event-name">5X Rates Activate</span>
-                        </div>
-                        <div class="event-item">
-                            <span class="event-time">8:00 PM EST</span>
-                            <span class="event-name">Bradley Convoy Event</span>
-                        </div>
-                        <div class="event-item">
-                            <span class="event-time">10:00 PM EST</span>
-                            <span class="event-name">Supply Drop Frenzy (2x Drops)</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="event-day">
-                    <div class="day-header saturday">
-                        <div class="day-icon">⚔️</div>
-                        <h3>SATURDAY</h3>
-                        <span class="day-subtitle">All-Out War</span>
-                    </div>
-                    <div class="day-events">
-                        <div class="event-item">
-                            <span class="event-time">2:00 PM EST</span>
-                            <span class="event-name">Heli Hunt Competition</span>
-                        </div>
-                        <div class="event-item">
-                            <span class="event-time">6:00 PM EST</span>
-                            <span class="event-name">PvP Arena Tournament ($100 Prize)</span>
-                        </div>
-                        <div class="event-item">
-                            <span class="event-time">10:00 PM EST</span>
-                            <span class="event-name">Raid Hour (Extra C4/Rockets)</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="event-day">
-                    <div class="day-header sunday">
-                        <div class="day-icon">💀</div>
-                        <h3>SUNDAY</h3>
-                        <span class="day-subtitle">Last Stand</span>
-                    </div>
-                    <div class="day-events">
-                        <div class="event-item">
-                            <span class="event-time">12:00 PM EST</span>
-                            <span class="event-name">Cargo Ship Battles</span>
-                        </div>
-                        <div class="event-item">
-                            <span class="event-time">4:00 PM EST</span>
-                            <span class="event-name">Final Raid Window</span>
-                        </div>
-                        <div class="event-item">
-                            <span class="event-time">8:00 PM EST</span>
-                            <span class="event-name">Monument Madness</span>
-                        </div>
-                        <div class="event-item event-special">
-                            <span class="event-time">11:00 PM EST</span>
-                            <span class="event-name">Weekend Ends - Back to 2X Rates</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Server Rules Section -->
-    <section id="rules" class="rules">
-        <div class="container">
-            <h2 class="section-title">Server Rules (Actually Enforced)</h2>
-            <p class="section-description">Break these and catch a ban. We don't do warnings.</p>
-            <div class="rules-grid">
-                <div class="rule-card">
-                    <div class="rule-number">1</div>
-                    <h3>No Cheating</h3>
-                    <p>Scripts, ESP, aimbots? Instant permaban. We don't care about your excuses. "My little brother" won't save you.</p>
-                </div>
-                <div class="rule-card">
-                    <div class="rule-number">2</div>
-                    <h3>No Racism/Harassment</h3>
-                    <p>Trash talk is fine. Being a bigot isn't. Cross the line and you're gone. Read the room.</p>
-                </div>
-                <div class="rule-card">
-                    <div class="rule-number">3</div>
-                    <h3>No Exploiting</h3>
-                    <p>Found a bug? Report it. Abused it? Banned. Don't test us - we check logs.</p>
-                </div>
-                <div class="rule-card">
-                    <div class="rule-number">4</div>
-                    <h3>Teaming Limits</h3>
-                    <p>Max 8-man groups. Zerging with 15 people? Enjoy your ban. We count bodies.</p>
-                </div>
-                <div class="rule-card">
-                    <div class="rule-number">5</div>
-                    <h3>No Base Blocking</h3>
-                    <p>Blocking monuments, caves, or spawn points gets you raided by admins. Then banned.</p>
-                </div>
-                <div class="rule-card">
-                    <div class="rule-number">6</div>
-                    <h3>Respect Admins</h3>
-                    <p>They volunteer their time. Don't spam them with BS. Ticket system exists for a reason.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Leaderboard Section -->
-    <section id="leaderboard" class="leaderboard">
-        <div class="container">
-            <h2 class="section-title">Top Dogs This Wipe</h2>
-            <p class="section-description">The sweats dominating the server right now</p>
-            <div class="leaderboard-content">
-                <div class="leaderboard-category">
-                    <h3>Most Kills</h3>
-                    <div class="leaderboard-list">
-                        <div class="leaderboard-item">
-                            <span class="rank">#1</span>
-                            <span class="player-name">xXSniperGod420Xx</span>
-                            <span class="player-stat">847 Kills</span>
-                        </div>
-                        <div class="leaderboard-item">
-                            <span class="rank">#2</span>
-                            <span class="player-name">RaidedYourMom</span>
-                            <span class="player-stat">723 Kills</span>
-                        </div>
-                        <div class="leaderboard-item">
-                            <span class="rank">#3</span>
-                            <span class="player-name">DoorCamperPro</span>
-                            <span class="player-stat">689 Kills</span>
-                        </div>
-                        <div class="leaderboard-item">
-                            <span class="rank">#4</span>
-                            <span class="player-name">OfflineRaider</span>
-                            <span class="player-stat">612 Kills</span>
-                        </div>
-                        <div class="leaderboard-item">
-                            <span class="rank">#5</span>
-                            <span class="player-name">BeachNakeds</span>
-                            <span class="player-stat">574 Kills</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="leaderboard-category">
-                    <h3>Raid Kings</h3>
-                    <div class="leaderboard-list">
-                        <div class="leaderboard-item">
-                            <span class="rank">#1</span>
-                            <span class="player-name">C4Collector</span>
-                            <span class="player-stat">43 Raids</span>
-                        </div>
-                        <div class="leaderboard-item">
-                            <span class="rank">#2</span>
-                            <span class="player-name">BaseDeleter</span>
-                            <span class="player-stat">38 Raids</span>
-                        </div>
-                        <div class="leaderboard-item">
-                            <span class="rank">#3</span>
-                            <span class="player-name">SulfurFarmer</span>
-                            <span class="player-stat">31 Raids</span>
-                        </div>
-                        <div class="leaderboard-item">
-                            <span class="rank">#4</span>
-                            <span class="player-name">FoundationWiper</span>
-                            <span class="player-stat">29 Raids</span>
-                        </div>
-                        <div class="leaderboard-item">
-                            <span class="rank">#5</span>
-                            <span class="player-name">RocketSpammer</span>
-                            <span class="player-stat">26 Raids</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <p class="leaderboard-note">Stats reset every wipe. Get on the board or get good.</p>
-        </div>
-    </section>
-
-    <!-- Connect Section -->
-    <section id="connect" class="connect">
-        <div class="container">
-            <h2 class="section-title">How to Connect</h2>
-            <div class="connect-content">
-                <div class="connect-step">
-                    <div class="step-number">1</div>
-                    <h3>Open Rust</h3>
-                    <p>Launch Rust from your Steam library</p>
-                </div>
-                <div class="connect-step">
-                    <div class="step-number">2</div>
-                    <h3>Press F1</h3>
-                    <p>Open the in-game console</p>
-                </div>
-                <div class="connect-step">
-                    <div class="step-number">3</div>
-                    <h3>Connect</h3>
-                    <p>Type: <code class="server-connect">client.connect YOUR.SERVER.IP:PORT</code></p>
-                </div>
-            </div>
-            <div class="server-info">
-                <h3>Server Information</h3>
-                <div class="info-grid">
-                    <div class="info-item">
-                        <span class="info-label">Server IP:</span>
-                        <span class="info-value">connect.rustyamerican.com</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Map Size:</span>
-                        <span class="info-value">4000</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Max Group:</span>
-                        <span class="info-value">8 Players</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Wipe Day:</span>
-                        <span class="info-value">Thursday 2PM EST</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Store Section -->
-    <section id="store" class="store">
-        <div class="container">
-            <h2 class="section-title">Support the Server</h2>
-            <p class="section-description">
-                Purchase VIP perks, kits, and exclusive items to support server development
-                and gain advantages in-game. All purchases help keep the server running!
-            </p>
-            <a href="https://rustyamerican.tebex.io/" target="_blank" class="store-button">
-                Visit Store
-            </a>
-        </div>
-    </section>
-
-    <!-- Discord Section -->
-    <section id="discord" class="discord-section">
-        <div class="container">
-            <h2 class="section-title">Join Our Community</h2>
-            <p class="section-description">
-                Connect with thousands of players, get support, participate in events,
-                and stay updated with server news on our Discord server.
-            </p>
-            <a href="#" class="discord-button" target="_blank">
-                <svg width="24" height="24" viewBox="0 0 71 55" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0)">
-                        <path d="M60.1045 4.8978C55.5792 2.8214 50.7265 1.2916 45.6527 0.41542C45.5603 0.39851 45.468 0.440769 45.4204 0.525289C44.7963 1.6353 44.105 3.0834 43.6209 4.2216C38.1637 3.4046 32.7345 3.4046 27.3892 4.2216C26.905 3.0581 26.1886 1.6353 25.5617 0.525289C25.5141 0.443589 25.4218 0.40133 25.3294 0.41542C20.2584 1.2888 15.4057 2.8186 10.8776 4.8978C10.8384 4.9147 10.8048 4.9429 10.7825 4.9795C1.57795 18.7309 -0.943561 32.1443 0.293408 45.3914C0.299005 45.4562 0.335386 45.5182 0.385761 45.5576C6.45866 50.0174 12.3413 52.7249 18.1147 54.5195C18.2071 54.5477 18.305 54.5139 18.3638 54.4378C19.7295 52.5728 20.9469 50.6063 21.9907 48.5383C22.0523 48.4172 21.9935 48.2735 21.8676 48.2256C19.9366 47.4931 18.0979 46.6 16.3292 45.5858C16.1893 45.5041 16.1781 45.304 16.3068 45.2082C16.679 44.9293 17.0513 44.6391 17.4067 44.3461C17.471 44.2926 17.5606 44.2813 17.6362 44.3151C29.2558 49.6202 41.8354 49.6202 53.3179 44.3151C53.3935 44.2785 53.4831 44.2898 53.5502 44.3433C53.9057 44.6363 54.2779 44.9293 54.6529 45.2082C54.7816 45.304 54.7732 45.5041 54.6333 45.5858C52.8646 46.6197 51.0259 47.4931 49.0921 48.2228C48.9662 48.2707 48.9102 48.4172 48.9718 48.5383C50.038 50.6034 51.2554 52.5699 52.5959 54.435C52.6519 54.5139 52.7526 54.5477 52.845 54.5195C58.6464 52.7249 64.529 50.0174 70.6019 45.5576C70.6551 45.5182 70.6887 45.459 70.6943 45.3942C72.1747 30.0791 68.2147 16.7757 60.1968 4.9823C60.1772 4.9429 60.1437 4.9147 60.1045 4.8978ZM23.7259 37.3253C20.2276 37.3253 17.3451 34.1136 17.3451 30.1693C17.3451 26.225 20.1717 23.0133 23.7259 23.0133C27.308 23.0133 30.1626 26.2532 30.1066 30.1693C30.1066 34.1136 27.28 37.3253 23.7259 37.3253ZM47.3178 37.3253C43.8196 37.3253 40.9371 34.1136 40.9371 30.1693C40.9371 26.225 43.7636 23.0133 47.3178 23.0133C50.9 23.0133 53.7545 26.2532 53.6986 30.1693C53.6986 34.1136 50.9 37.3253 47.3178 37.3253Z" fill="currentColor"/>
-                    </g>
-                    <defs>
-                        <clipPath id="clip0">
-                            <rect width="71" height="55" fill="white"/>
-                        </clipPath>
-                    </defs>
-                </svg>
-                Join Discord
-            </a>
-        </div>
-    </section>
-
-    <!-- Player Testimonials -->
-    <section class="testimonials">
-        <div class="container">
-            <h2 class="section-title">What Players Are Saying</h2>
-            <p class="section-description">Real feedback from Weekend Warriors (and some salt)</p>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Got offline raided Friday night. Rebuilt Saturday morning. Revenge raided Sunday. 10/10 weekend."</p>
-                    <div class="testimonial-author">- xXShadowRaiderXx</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"5X rates on weekends is insane. Built a compound in 3 hours and lost it in 30 minutes. Worth it."</p>
-                    <div class="testimonial-author">- NakedBeachBob</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Admins actually ban cheaters. I reported a scripter Friday, he was gone by Saturday. Respect."</p>
-                    <div class="testimonial-author">- LegitPlayer2024</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★☆</div>
-                    <p class="testimonial-text">"Best weekend server in NA. Only lost 1 star because I keep getting doorcamped. My fault tho."</p>
-                    <div class="testimonial-author">- DoorCampVictim</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Saturday PvP tournaments are lit. Won $100 last month. Admin didn't ghost me. Real money."</p>
-                    <div class="testimonial-author">- PvPGodTTV</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Community is toxic in the best way. Discord is 24/7 trash talk and I love it."</p>
-                    <div class="testimonial-author">- TrashTalkKing</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Rusty American -->
-    <section class="why-choose">
-        <div class="container">
-            <h2 class="section-title">Why Rusty American Destroys Other Servers</h2>
-            <div class="comparison-grid">
-                <div class="comparison-item">
-                    <div class="comparison-icon winner">✓</div>
-                    <h3>Rusty American</h3>
-                    <ul class="comparison-list">
-                        <li>5X rates on weekends only</li>
-                        <li>Active admins (actually respond)</li>
-                        <li>Real cash tournaments</li>
-                        <li>No pay-to-win garbage</li>
-                        <li>Weekly fresh wipes</li>
-                        <li>Max 8-man teams (enforced)</li>
-                    </ul>
-                </div>
-                <div class="comparison-item">
-                    <div class="comparison-icon loser">✗</div>
-                    <h3>Other Servers</h3>
-                    <ul class="comparison-list losing">
-                        <li>10X rates all week (boring)</li>
-                        <li>Ghost admins (never online)</li>
-                        <li>No events (dead weekends)</li>
-                        <li>VIP kits = pay to win</li>
-                        <li>Monthly wipes (stale meta)</li>
-                        <li>No team limits (zerg fest)</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq">
-        <div class="container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <div class="faq-question">When do the 5X rates activate?</div>
-                    <div class="faq-answer">Friday 6PM EST through Sunday 11PM EST. Weekdays are 2X rates so casuals can still farm.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Are blueprints wiped?</div>
-                    <div class="faq-answer">Yes, full BP wipe every Thursday 2PM EST. Everyone starts fresh. No sweaty groups with everything researched day 1.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Can I play solo?</div>
-                    <div class="faq-answer">Absolutely. We don't have solo-only rules but the 8-man limit keeps mega zergs out. Solos and duos thrive here.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Do you ban offline raiders?</div>
-                    <div class="faq-answer">No. Offline raiding is part of Rust. But we do have raid windows during peak hours where you get bonus explosives.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">How do I report cheaters?</div>
-                    <div class="faq-answer">Open a ticket in Discord. Include video evidence if possible. Admins review reports within 24 hours. We have zero tolerance.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Is there a grace period after wipe?</div>
-                    <div class="faq-answer">First 2 hours after Thursday wipe = no raiding. After that, it's open season. Get your base up quick.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Can I join mid-wipe?</div>
-                    <div class="faq-answer">Yes! Weekend 5X rates make it easy to catch up. Plus we have starter kits in the Discord for new joiners.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">What map size?</div>
-                    <div class="faq-answer">4000 map with 200 slots. Big enough to spread out, small enough for constant action. Perfect balance.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TikTok Section -->
-    <section class="tiktok-section">
-        <div class="container">
-            <h2 class="section-title">Watch the Carnage</h2>
-            <p class="section-description">
-                Check out insane raids, clutch plays, and weekend warfare highlights. Follow @rustyamerican1 for daily content.
-            </p>
-            <div class="tiktok-grid">
-                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@rustyamerican1/video/7516674523702381866" data-video-id="7516674523702381866" style="max-width: 605px;min-width: 325px;" >
-                    <section>
-                        <a target="_blank" title="@rustyamerican1" href="https://www.tiktok.com/@rustyamerican1?refer=embed">@rustyamerican1</a>
-                    </section>
-                </blockquote>
-            </div>
-            <a href="https://www.tiktok.com/@rustyamerican1" target="_blank" class="tiktok-button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
-                </svg>
-                Follow for Daily Clips
-            </a>
-            <div class="social-proof">
-                <p>🔥 Join 2,000+ followers watching weekend warfare</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Vote Section -->
-    <section class="vote-section">
-        <div class="container">
-            <h2 class="section-title">Support Us - Vote Daily</h2>
-            <p class="section-description">
-                Vote for Rusty American on server listing sites and get in-game rewards.
-                <br>Help us climb the ranks and clap other servers.
-            </p>
-            <div class="vote-buttons">
-                <a href="https://www.battlemetrics.com/servers/rust" target="_blank" class="vote-button">
-                    <span class="vote-icon">⭐</span>
-                    <span class="vote-text">
-                        <span class="vote-site">BattleMetrics</span>
-                        <span class="vote-reward">Vote for rewards</span>
-                    </span>
-                </a>
-                <a href="https://rust-servers.net/" target="_blank" class="vote-button">
-                    <span class="vote-icon">⭐</span>
-                    <span class="vote-text">
-                        <span class="vote-site">Rust-Servers.net</span>
-                        <span class="vote-reward">Vote for rewards</span>
-                    </span>
-                </a>
-                <a href="https://just-wiped.net/rust_servers" target="_blank" class="vote-button">
-                    <span class="vote-icon">⭐</span>
-                    <span class="vote-text">
-                        <span class="vote-site">Just-Wiped</span>
-                        <span class="vote-reward">Vote for rewards</span>
-                    </span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Rusty American. All rights reserved.</p>
-            <p class="footer-note">Rusty American is not affiliated with Facepunch Studios.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-    <script async src="https://www.tiktok.com/embed.js"></script>
+        <p class="footer">
+            Thank you for your patience and continued support!
+            <br>
+            — The Rusty American Team
+        </p>
+    </div>
 </body>
 </html>
